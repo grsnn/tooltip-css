@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1b2f;
+}
+
+.box-tooltip{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    position: relative;
+    height: 100px;
+}
+
+.box-tooltip .title{
+    position: absolute;
+    top: 10px;
+    background-color: rgba(22,36,71);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    opacity: 0;
+}
+
+.box-tooltip .title .triangulo{
+    width: 15px;
+    height: 15px;
+    background-color: rgba(22,36,71);
+    position: absolute;
+    transform: rotate(-45deg);
+    bottom: -7.5px;
+}
+
+.box-tooltip .enlace{
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Gill Sans', sans-serif;
+    font-size: 25px;
+    display: block;
+}
+
+
+.box-tooltip .enlace:hover{
+    opacity: 0.7;
+    transition: all .5s linear;
+}
+
+.container:hover .title{
+    top: -8px;
+    opacity: 1;
+    transition: top .3s linear, opacity .3s ease;
+}
